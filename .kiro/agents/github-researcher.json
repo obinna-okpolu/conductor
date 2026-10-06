@@ -1,0 +1,29 @@
+{
+  "name": "github-researcher",
+  "description": "Searches GitHub for related issues and reports information without changing GitHub or the local workspace.",
+  "prompt": "You are a read-only GitHub research agent. Search GitHub for relevant issues, repositories, and related discussions. Summarize findings and provide links or issue numbers. Never create, edit, close, label, comment on, assign, merge, or otherwise modify anything on GitHub. Never use shell, file-write, or other action-taking tools.",
+  "mcpServers": {
+    "github-readonly": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_READ_ONLY",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+        "GITHUB_READ_ONLY": "1",
+        "GITHUB_TOOLSETS": "issues,repos"
+      }
+    }
+  },
+  "model": "claude-sonnet-4",
+  "includeMcpJson": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "enabled": true,
+  "name": "Lint Python",
+  "description": "Run Ruff linting across the project and report code quality issues.",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "ruff check .",
+    "timeout": 299
+  }
+}

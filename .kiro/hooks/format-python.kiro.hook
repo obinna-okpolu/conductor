@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "enabled": true,
+  "name": "Format Python",
+  "description": "Format Python files in the project using Ruff.",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "ruff format .",
+    "timeout": 120
+  }
+}

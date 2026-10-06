@@ -1,0 +1,44 @@
+# Conductor configuration file.
+#
+# All values shown are defaults; missing entries fall back to the documented
+# defaults baked into config.config.load_config().
+
+[camera]
+device_id = 0
+fps = 30
+
+[detector]
+model_complexity = 0
+min_detection_confidence = 0.5
+min_tracking_confidence = 0.5
+
+[gesture]
+# Clutch thresholds (normalized). engage_threshold < release_threshold for hysteresis.
+clutch_engage_threshold = 0.08
+clutch_release_threshold = 0.12
+
+# Swipe thresholds (normalized).
+swipe_displacement_threshold = 0.3
+swipe_velocity_threshold = 1.0
+swipe_window_frames = 10
+swipe_direction_consistency_threshold = 0.7
+
+[state_machine]
+confidence_threshold = 0.5
+fist_hold_duration = 0.5
+tracking_jump_threshold = 0.5
+staleness_threshold = 0.1
+tracking_loss_cooldown = 0.3
+
+[intent]
+scroll_deadzone = 0.02
+scroll_scale_factor = 500.0
+tab_switch_threshold = 0.15
+tab_switch_rearm_threshold = 0.05
+
+[hud]
+window_width = 200
+window_height = 100
+opacity = 0.8
+position = "top-right"
+feedback_duration = 1.0
