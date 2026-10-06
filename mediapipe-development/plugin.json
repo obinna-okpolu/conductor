@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mediapipe-development",
+  "version": "1.0.0",
+  "description": "Build, debug, and test local MediaPipe hand-tracking and gesture systems with reliable landmark geometry, temporal state, camera diagnostics, and safe action dispatch.",
+  "author": {
+    "name": "Conductor Project"
+  },
+  "keywords": [
+    "MediaPipe",
+    "MediaPipe Hands",
+    "HandLandmarker",
+    "hand landmarks",
+    "hand tracking",
+    "gesture recognition",
+    "gesture classifier",
+    "computer vision",
+    "OpenCV webcam",
+    "temporal smoothing",
+    "landmark geometry"
+  ],
+  "homepage": "https://ai.google.dev/edge/mediapipe"
+}
